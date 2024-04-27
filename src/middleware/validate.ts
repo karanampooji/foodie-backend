@@ -5,6 +5,7 @@ import {
   getRecipeSchema,
   getUserRecipesSchema,
   joinSchema,
+  searchRecipeSchema,
 } from "../schema-validations";
 
 //middleware to validate req data
@@ -15,6 +16,7 @@ export const validate =
       | typeof getRecipeSchema
       | typeof getUserRecipesSchema
       | typeof joinSchema
+      | typeof searchRecipeSchema
     >
   ) =>
   async (req: Request, res: Response, next: NextFunction) => {
